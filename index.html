@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Food Menu - Figma Replica</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-grid">
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <div class="brand-wrap">
+        <img src="assests/6c3056665f8945b573189c004e90e2728a92eb63 (1).png" alt="chef logo" class="logo">
+        <h1>Your Restaurant Menu</h1>
+        <p class="slogan">Your Slogan</p>
+      </div>
+
+      <nav class="quick-links" aria-label="Quick Links">
+        <h3>Quick Links</h3>
+        <ol>
+          <li>Home</li>
+          <li>Your Orders</li>
+          <li>Wallet</li>
+          <li>Profile</li>
+          <li>Logout</li>
+        </ol>
+      </nav>
+
+      <div class="about-us">
+        <h3>More About Us</h3>
+        <ol>
+          <li>Our blog</li>
+          <li>Upcoming Dishes</li>
+          <li>Our Story</li>
+          <li>Social Media Links</li>
+        </ol>
+      </div>
+    </aside>
+
+    <!-- MAIN AREA -->
+    <div class="main-area">
+      <!-- TOPBAR -->
+      <header class="topbar">
+        <div class="search-wrapper">
+          <input id="search" placeholder="Search Food Item" aria-label="Search food item">
+        </div>
+        <div class="auth">
+          <button class="btn signup">Signup</button>
+          <button class="btn login">Login</button>
+          <div class="avatar" title="Profile"><img id="current-profile" src="assests/6c3056665f8945b573189c004e90e2728a92eb63.png" alt=""></div>
+        </div>
+      </header>
+
+      <!-- CONTENT -->
+      <main class="content">
+        <!-- Banner / Hero -->
+        <section class="banner">
+          <img class="banner-img" src="assests/bfaad74b76ba1256d10f8af33fd5e08b7574087c.png" alt="banner" />
+        </section>
+
+        <!-- Menu Title -->
+        <section class="menu-section">
+          <h2>Menu</h2>
+          <div id="menuGrid" class="menu-grid" role="list"></div>
+          <div class="actions">
+            <button id="startOrder" class="btn primary">Start Order Flow</button>
+          </div>
+          <div id="menuFlowStatus" class="flow-steps" aria-live="polite"></div>
+        </section>
+      </main>
+
+      <footer class="footer">Built to task - fetch menu & run order flow</footer>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
