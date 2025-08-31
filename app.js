@@ -33,6 +33,7 @@ async function getMenu(){
 }
 
 function renderMenu(items){
+  debugger
   menuGrid.innerHTML = '';
   items.forEach(item => {
     const card = document.createElement('div');
@@ -48,7 +49,8 @@ function renderMenu(items){
       </div>`;
     // image fallback
     const img = card.querySelector('img');
-    img.addEventListener('error', () => img.src ='https://picsum.photos/600/400?food');
+    img.addEventListener('error', () => img.src = `https://picsum.photos/seed/${item.id}/600/400?food`);
+
     menuGrid.appendChild(card);
   });
 }
